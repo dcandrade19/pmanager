@@ -3,8 +3,7 @@ package com.dca.pmanager.documents;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
-public class Project {
-    private String id;
+public class Project extends Base {
     private String name;
     private String description;
     private Client client;
@@ -12,14 +11,6 @@ public class Project {
     private int paidHours;
     private int workedHours;
     private double hourlyRate;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -77,16 +68,7 @@ public class Project {
         this.hourlyRate = hourlyRate;
     }
 
-    public Project(String id, String name, String description, Client client, int fixedHours, int paidHours,
-            int workedHours, double hourlyRate) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.client = client;
-        this.fixedHours = fixedHours;
-        this.paidHours = paidHours;
-        this.workedHours = workedHours;
-        this.hourlyRate = hourlyRate;
+    public Project() {
     }
 
 }
